@@ -1,0 +1,34 @@
+# Bugku-秋名山老司机
+
+---
+
+这题考察的是快速反弹POST请求。
+
+关于这个知识点，有篇文章写得很好，没有用Python写过爬虫的同学可以查阅一下。
+
+https://ciphersaw.me/2017/12/16/%E8%AF%A6%E8%A7%A3%20CTF%20Web%20%E4%B8%AD%E7%9A%84%E5%BF%AB%E9%80%9F%E5%8F%8D%E5%BC%B9%20POST%20%E8%AF%B7%E6%B1%82/
+
+然后下面是我解题写的小脚本。
+
+```python
+import requests
+import re
+sess = requests.Session()
+url = "http://123.206.87.240:8002/qiumingshan/"
+response = sess.get(url)
+expr = re.search(r'<div>(.*?)=?;</div>',response.text).group()[5:-9]
+result = eval(expr)
+response = sess.post(url,data={'value':result})
+print(response.text)
+```
+
+我和他(上面那篇文章作者)的思路就在用正则提取表达式这一步不一样。
+
+他更精辟用了(\d+[+\-*])+(\d+)这样一个pattern来匹配表达式。
+
+而我是发现返回的HTML源码中，这个表达式在<div>标签中间，所以先将它提取出来，然后再去掉头尾的<div>和=?;
+
+怎么说，大佬就是大佬呀。
+
+那么厉害的正则我现在是写不出来的，还是要多写多练。
+
