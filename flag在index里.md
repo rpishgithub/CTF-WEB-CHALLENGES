@@ -4,21 +4,21 @@
 
 ##解题过程：
 
-![1549740400771](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740400771.png)
+![1549740400771](https://raw.githubusercontent.com/rpishgithub/CTF-WEB-CHALLENGES/master/Images/1549740400771.png)
 
-![1549740414021](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740414021.png)
+![1549740414021](https://raw.githubusercontent.com/rpishgithub/CTF-WEB-CHALLENGES/master/Images/1549740414021.png)
 
 进入到解题页面，只有一个链接，查看源码也没有提示。
 
 
 
-![1549740544529](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740544529.png)
+![1549740544529](https://raw.githubusercontent.com/rpishgithub/CTF-WEB-CHALLENGES/master/Images/1549740544529.png)
 
-![1549740562949](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740562949.png)
+![1549740562949](https://raw.githubusercontent.com/rpishgithub/CTF-WEB-CHALLENGES/master/Images/1549740562949.png)
 
 进入链接看看，一样没有什么特别的地方。
 
-![1549740634137](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740634137.png)
+![1549740634137](https://raw.githubusercontent.com/rpishgithub/CTF-WEB-CHALLENGES/master/Images/1549740634137.png)
 
 
 
@@ -26,7 +26,7 @@
 
 我们测试一下，将“ file= ”接上"../"查看上一级目录，如果有报错说明存在LFI漏洞。
 
-![1549740932971](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740932971.png)
+![1549740932971](https://raw.githubusercontent.com/rpishgithub/CTF-WEB-CHALLENGES/master/Images/1549740932971.png)
 
 欸！虽然没有报错，不过它给了我们一个提示，这很可能是有这么个漏洞的。
 
