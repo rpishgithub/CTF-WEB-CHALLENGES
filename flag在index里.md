@@ -4,7 +4,7 @@
 
 ##解题过程：
 
-![1549740400771](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/tree/master/Images、1549740400771.png)
+![1549740400771](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/tree/master/Images/1549740400771.png)
 
 ![1549740414021](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549740414021.png)
 
