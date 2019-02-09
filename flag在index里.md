@@ -4,21 +4,21 @@
 
 ##解题过程：
 
-![1549740400771](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/tree/master/Images/1549740400771.png)
+![1549740400771](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740400771.png)
 
-![1549740414021](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549740414021.png)
+![1549740414021](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740414021.png)
 
 进入到解题页面，只有一个链接，查看源码也没有提示。
 
 
 
-![1549740544529](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549740544529.png)
+![1549740544529](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740544529.png)
 
-![1549740562949](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549740562949.png)
+![1549740562949](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740562949.png)
 
 进入链接看看，一样没有什么特别的地方。
 
-![1549740634137](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549740634137.png)
+![1549740634137](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740634137.png)
 
 
 
@@ -26,17 +26,17 @@
 
 我们测试一下，将“ file= ”接上"../"查看上一级目录，如果有报错说明存在LFI漏洞。
 
-![1549740932971](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549740932971.png)
+![1549740932971](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549740932971.png)
 
 欸！虽然没有报错，不过它给了我们一个提示，这很可能是有这么个漏洞的。
 
 既然题目叫做flag在index里，那我们试试利用LFI漏洞获取一下index.php的源码吧。
 
-![1549741230428](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549741230428.png)
+![1549741230428](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549741230428.png)
 
 再对源码进行base64解码就获得了flag。
 
-![1549741307020](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549741307020.png)
+![1549741307020](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549741307020.png)
 
 
 
@@ -56,7 +56,7 @@
 
 ​	High Leval源码则是限定只能获取指定页面，对LFI和RFI都进行了防护。
 
-​	![1549741712464](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549741712464.png)
+​	![1549741712464](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549741712464.png)
 
 
 
@@ -100,7 +100,7 @@
 
 ​	PHP支持协议与封装协议
 
-![1549743415791](C:\Users\79825\Documents\GitHub\CTF-WEB-CHALLENGES\Images\1549743415791.png)
+![1549743415791](https://github.com/rpishgithub/CTF-WEB-CHALLENGES/raw/master/Images/1549743415791.png)
 
 ​	像上面获取源码的例子中，就用到了php://，它先将index.php读入，再base64编码后输出。
 
